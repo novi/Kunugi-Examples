@@ -3,8 +3,8 @@ import Kunugi
 import Inquiline
 
 class Context: ContextBox {
-    var context: [ContextType] = []
-    var request: Request
+	var context: [ContextType] = []
+	var request: Request
     
 	var method: Method
 	var path: String
