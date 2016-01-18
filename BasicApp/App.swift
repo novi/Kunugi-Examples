@@ -22,9 +22,9 @@ class App: AppType {
     var application: Application {
         let handler = self.handler
         return { request in
-			guard let method = Method(rawValue: request.method) else {
-				return Response(.MethodNotAllowed)
-			}
+            guard let method = Method(rawValue: request.method) else {
+                return Response(.MethodNotAllowed)
+            }
             do {
                 switch try handler.handleIfNeeded(Context(request: request, method: method)) {
                 case .Next:
